@@ -10,22 +10,24 @@ package cartester;
  * @author nokid4249
  */
 public class Car {
-
+    //initializes the car parts 
     String carMake, carModel, carTimeTravel, carBulletProof, carTurboBoost;
-    double carPrice;
-    int carYear;
+    String carPrice;
+    String carYear;
 
     public Car() {
-        carPrice = 0;
+        //states the default car parts
+        carPrice = "0";
         carTurboBoost = "No";
         carBulletProof = "No";
         carTimeTravel = "No";
-        carYear = 0;
+        carYear = "0";
         carMake = "Default";
         carModel = "Default Model";
     }
 
-    public Car(double price, String boost, String proof, String time, int year, String make, String model) {
+    public Car(String price, String boost, String proof, String time, String year, String make, String model) {
+        //initializes a constructor for the car parts
         carPrice = price;
         carTurboBoost = boost;
         carBulletProof = proof;
@@ -36,6 +38,7 @@ public class Car {
     }
 
     public String toString() {
+        //this method displays all the car parts
         String output = "Price: " + carPrice + "\n";
         output += "Turbo Boost?: " + carTurboBoost + "\n";
         output += "Bullet Proof?: " + carBulletProof + "\n";
@@ -43,6 +46,7 @@ public class Car {
         output += "Year Made: " + carYear + "\n";
         output += "Car Make: " + carMake + "\n";
         output += "Car Model: " + carModel + "\n";
+        //when everything is outputed, return it
         return output;
     }
 }
