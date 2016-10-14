@@ -14,6 +14,7 @@ public class Car {
     String carMake, carModel, carTimeTravel, carBulletProof, carTurboBoost;
     String carPrice;
     String carYear;
+    int carHorn;
 
     public Car() {
         //states the default car parts
@@ -24,9 +25,10 @@ public class Car {
         carYear = "0";
         carMake = "Default";
         carModel = "Default Model";
+        carHorn = 0;
     }
 
-    public Car(String price, String boost, String proof, String time, String year, String make, String model) {
+    public Car(String price, String boost, String proof, String time, String year, String make, String model, int horn) {
         //initializes a constructor for the car parts
         carPrice = price;
         carTurboBoost = boost;
@@ -35,6 +37,8 @@ public class Car {
         carYear = year;
         carMake = make;
         carModel = model;
+        carHorn = horn;
+        
     }
 
     public String toString() {
@@ -46,6 +50,9 @@ public class Car {
         output += "Year Made: " + carYear + "\n";
         output += "Car Make: " + carMake + "\n";
         output += "Car Model: " + carModel + "\n";
+        if (carHorn == 1){
+            output += "BEEEEEEEEEEEEEEEP";
+        }
         //when everything is outputed, return it
         return output;
     }
